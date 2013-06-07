@@ -5,9 +5,15 @@
   var $slides = $(".pagehead, .markdown-body h1, .markdown-body h2");
 
   function initialize() {
-    var GISTDECK_CSS_URL= window.GISTDECK_CSS_URL || "https://gistdeck.herokuapp.com/gistdeck.css";
+    var SLUG = window.location.toString().match( /[^\/]*$/ )[0],
+        GISTDECK_CSS_URL= window.GISTDECK_CSS_URL || "https://s3.amazonaws.com/tybenz.gistdeck/gistdeck.css",
+        CUSTOM_GIST_CSS_URL = window.CUSTOM_GIST_CSS_URL || "https://s3.amazonaws.com/tybenz.gistdeck/" + SLUG + "/gistdeck.css";
 
     $('<link rel="stylesheet" href="' + GISTDECK_CSS_URL + '" type="text/css" />')
+      .addClass('gistdeck-css')
+      .appendTo('head');
+
+    $('<link rel="stylesheet" href="' + CUSTOM_GIST_CSS_URL + '" type="text/css" />')
       .addClass('gistdeck-css')
       .appendTo('head');
 
