@@ -2,18 +2,18 @@
 
   // Cache window and slides jQuery selectors
   var $window = $(window);
-  var $slides = $(".pagehead, .markdown-body h1, .markdown-body h2");
+  var $slides = $('.pagehead, .markdown-body h1, .markdown-body h2');
 
   function initialize() {
     var SLUG = window.location.toString().match( /[^\/]*$/ )[0],
-        GISTDECK_CSS_URL= window.GISTDECK_CSS_URL || "https://s3.amazonaws.com/tybenz.gistdeck/gistdeck.css",
-        CUSTOM_GIST_CSS_URL = window.CUSTOM_GIST_CSS_URL || "https://s3.amazonaws.com/tybenz.gistdeck/" + SLUG + "/gistdeck.css";
+        GISTDECK_CSS_URL= window.GISTDECK_CSS_URL || 'https://s3.amazonaws.com/tybenz.gistdeck/gistdeck.css',
+        CUSTOM_GIST_CSS_URL = window.CUSTOM_GIST_CSS_URL || 'https://s3.amazonaws.com/tybenz.gistdeck/' + SLUG + '/gistdeck.css';
 
-    $('<link rel="stylesheet" href="' + GISTDECK_CSS_URL + '" type="text/css" />')
+    $('<link rel=\'stylesheet\' href=\'' + GISTDECK_CSS_URL + '\' type=\'text/css\' />')
       .addClass('gistdeck-css')
       .appendTo('head');
 
-    $('<link rel="stylesheet" href="' + CUSTOM_GIST_CSS_URL + '" type="text/css" />')
+    $('<link rel=\'stylesheet\' href=\'' + CUSTOM_GIST_CSS_URL + '\' type=\'text/css\' />')
       .addClass('gistdeck-css')
       .appendTo('head');
 
@@ -82,9 +82,9 @@
     titleTop = ($window.height()/2) - (contentHeight/2);
 
     var padding = {
-      "DIV": top,
-      "H1":  titleTop,
-      "H2":  20
+      'DIV': top,
+      'H1':  titleTop,
+      'H2':  20
     }[$slides[n].tagName];
 
     $(document).scrollTop(top - padding);

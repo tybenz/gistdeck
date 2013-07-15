@@ -199,7 +199,7 @@ h2 + p img {
   background: transparent !important;
   font-family: "Ubuntu Mono", monospace;
 }
-div.highlight pre, pre, .markdown-body code {
+.markdown-body .highlight pre, .markdown-body pre, div.highlight pre, pre, .markdown-body code {
   font-family: "Ubuntu Mono", monospace;
   border: 1px solid hsla(246, 13%, 45%, 0.4) !important;
   background: hsla(246, 13%, 99%, 0.6) !important;
@@ -209,9 +209,10 @@ div.highlight pre, pre, .markdown-body code {
   padding: 11px !important;
   text-align:left;
 }
-div.highlight pre, pre code, li code {
+.markdown-body pre, .markdown-body div.highlight pre, pre code, li code {
   font-family: "Ubuntu Mono", monospace;
-  font-size:0.7em !important;
+  font-size:24px !important;
+  line-height: 28px !important;
   padding: 11px !important;
   text-align: left;
 }
@@ -337,3 +338,7 @@ div.highlight pre, pre code, li code {
     font-style: normal;
 }
 
+.markdown-body del, .markdown strike, .markdown s {
+  text-decoration: none !important;
+  color: #ccc !important;
+}
