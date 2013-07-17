@@ -32,8 +32,8 @@
     $('.gist-description').css('margin-bottom', $window.height());
 
     $(document).on('keydown.gistdeck', function(e) {
-      if (e.which == 37)      displaySlide(getCurrentSlideIdx()-1);
-      else if (e.which == 39) displaySlide(getCurrentSlideIdx()+1);
+      if (e.which == 33 || e.which == 37)      { e.preventDefault(); displaySlide(getCurrentSlideIdx()-1); }
+      else if (e.which == 34 || e.which == 39) { e.preventDefault(); displaySlide(getCurrentSlideIdx()+1); }
       else if (e.which == 27) resetGist();
     });
 
