@@ -217,6 +217,15 @@ h2 + p img {
   text-align: left;
 }
 
+.highlight .kd {
+  font-weight: normal !important;
+  color: #008080;
+}
+
+.highlight .k {
+  color: #445588 !important;
+}
+
 @font-face {
     font-family: 'Ubuntu';
     src: url('https://s3.amazonaws.com/tybenz.gistdeck/font/Ubuntu-R-webfont.eot');
