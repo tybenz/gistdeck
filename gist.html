@@ -294,6 +294,25 @@
 <a name="this-is-a-topic" class="anchor" href="#this-is-a-topic"><span class="mini-icon mini-icon-link"></span></a>This is a topic</h1>
 
 <p>front and center</p>
+<div class="highlight"><pre><span class="s2">"var Secret = function( el, options ) {"</span>
+    <span class="s2">"var widget = this;"</span>
+
+    <span class="s2">"this.$el = $( el );"</span>
+
+    <span class="c1">// override default options</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="p">{},</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultOptions</span><span class="p">,</span> <span class="nx">options</span> <span class="p">);</span>
+
+    <span class="s2">"this.$el.on( this.options.applyEvent, function() {"</span>
+        <span class="s2">"widget.apply();"</span>
+        <span class="s2">"widget.trigger( 'secret-apply' );"</span>
+    <span class="s2">"});"</span>
+
+    <span class="s2">"this.$el.on( this.options.removeEvent, function() {"</span>
+        <span class="s2">"widget.remove();"</span>
+        <span class="s2">"widget.trigger( 'secret-remove' );"</span>
+    <span class="s2">"});"</span>
+<span class="s2">"};"</span>
+</pre></div>
 
 <h2>
 <a name="this-is-a-subtopic" class="anchor" href="#this-is-a-subtopic"><span class="mini-icon mini-icon-link"></span></a>This is a Subtopic</h2>

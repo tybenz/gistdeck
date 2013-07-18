@@ -25,6 +25,14 @@
       });
     });
 
+    // Programmatically remove double quotes - used as strike through for code snippets
+    $('.highlight .s2').each(function() {
+      var $this = $( this ),
+          text = $this.text();
+
+      $this.text( text.replace( /\"/g, '' ) );
+    });
+
     // Set gap before all slides but first, and after slides container, equal to the window height
     $slides.not($slides.first()).css('margin-top', $window.height());
     $('.markdown-body').css('margin-bottom', $window.height());

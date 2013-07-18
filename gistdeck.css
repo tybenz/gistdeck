@@ -1,3 +1,5 @@
+/* import font */
+@import "http://fonts.googleapis.com/css?family=Ubuntu:regular&subset=Latin,Cyrillic";
 
 /* hide gist interface */
 #header,
@@ -114,16 +116,19 @@ a:hover {
 }
 
 .gist-author img {
-  height:36px !important;
-  width: 36px !important;
+  height:70px !important;
+  width: 70px !important;
   margin-bottom: 7px;
   margin-right: 6px;
 }
 
 .gist-author .author a {
   color: #111 !important;
-  font-size: 24px !important;
+  font-size: 34px !important;
   font-weight:normal !important;
+  position: relative;
+  top: 10px;
+  left: 10px;
 }
 
 .gist-description p {
@@ -224,6 +229,11 @@ h2 + p img {
 
 .highlight .k {
   color: #445588 !important;
+  font-weight: normal !important;
+}
+
+.highlight .s2 {
+  color: #ccc !important;
 }
 
 @font-face {
