@@ -12,8 +12,8 @@
 
   <link type="text/plain" rel="author" href="http://github.com/humans.txt" />
 
-  <link href="https://gist.github.com/assets/application-a5273b7592b297d4d5e76867aea0b3d9.css" media="screen, print" rel="stylesheet" />
-  <script src="https://gist.github.com/assets/application-60be331cf6f806136bcce7891342bf17.js"></script>
+  <link href="https://gist.github.com/assets/application-e94353e01f57d26381123002a24252b7.css" media="screen, print" rel="stylesheet" />
+  <script src="https://gist.github.com/assets/application-45db7981ee19b356eb6a0ae76cc21e09.js"></script>
 
     <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@github">
@@ -25,13 +25,12 @@
   <meta property="og:description" content="From Gist to Deck - Gist is a simple way to share snippets of text and code with others.">
   <meta name="description" content="From Gist to Deck - Gist is a simple way to share snippets of text and code with others.">
 
+  <script type="text/javascript" charset="utf-8" src="gistdeck.js"></script>
   <script type="text/javascript">
     var GISTDECK_CSS_URL="gistdeck.css";
 
     window.onload = function () {
-      var s = document.createElement("script");
-      s.setAttribute("src", "gistdeck.js");
-      document.getElementsByTagName("head")[0].appendChild(s);
+      gistdeck();
     };
   </script>
 </head>
@@ -294,25 +293,6 @@
 <a name="this-is-a-topic" class="anchor" href="#this-is-a-topic"><span class="mini-icon mini-icon-link"></span></a>This is a topic</h1>
 
 <p>front and center</p>
-<div class="highlight"><pre><span class="s2">"var Secret = function( el, options ) {"</span>
-    <span class="s2">"var widget = this;"</span>
-
-    <span class="s2">"this.$el = $( el );"</span>
-
-    <span class="c1">// override default options</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="p">{},</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultOptions</span><span class="p">,</span> <span class="nx">options</span> <span class="p">);</span>
-
-    <span class="s2">"this.$el.on( this.options.applyEvent, function() {"</span>
-        <span class="s2">"widget.apply();"</span>
-        <span class="s2">"widget.trigger( 'secret-apply' );"</span>
-    <span class="s2">"});"</span>
-
-    <span class="s2">"this.$el.on( this.options.removeEvent, function() {"</span>
-        <span class="s2">"widget.remove();"</span>
-        <span class="s2">"widget.trigger( 'secret-remove' );"</span>
-    <span class="s2">"});"</span>
-<span class="s2">"};"</span>
-</pre></div>
 
 <h2>
 <a name="this-is-a-subtopic" class="anchor" href="#this-is-a-subtopic"><span class="mini-icon mini-icon-link"></span></a>This is a Subtopic</h2>
